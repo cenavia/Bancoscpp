@@ -12,7 +12,7 @@ int main()
 	char cedula[100], codigo[50], tipo[150], saldo[50];
 	char fecha_oportuna[150];
 	int enter=13;
-	
+	// Codigo para Opciones del Sistema.
 	do{do{system("cls");
 	cout<<"\n\n\n Bancos - Menu principal\n\n\n";
 	cout<<"1.- Ingresar cuentas.\n";
@@ -24,7 +24,7 @@ int main()
 	switch (opc)
 	{
        case 1:
-				
+				// Codigo para Ingresar informacion al programa - Cuentas
 				FILE *directorio;
 				
 				printf("AGENDA TELEFONICA\n");
@@ -72,6 +72,7 @@ int main()
 
             break;
        case 2:
+       	// Codigo para Leer datos ingresados.
           FILE  *pfs;
 		  char letra;
 		
