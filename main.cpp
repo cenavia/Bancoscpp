@@ -52,6 +52,8 @@ int main()
 				
 				printf("\nArchivo guardado correctamente !!!!");
 				
+			
+				fprintf(directorio, "\n------------------------------------------------------------\n");
 				fprintf(directorio, "Cedula: ");
 				fputs(cedula, directorio);
 				fprintf(directorio, "Codigo: ");
@@ -70,8 +72,31 @@ int main()
 
             break;
        case 2:
-            
-            break;
+          FILE  *pfs;
+		  char letra;
+		
+		  // Abro el fichero
+		  pfs = fopen("Cuentas.txt","r");
+		
+		  // Si ha dado fallado termino
+		  if ( pfs == NULL )
+		     {
+		     puts("Error al abrir el fichero.");
+		     return 1;
+		     }
+		
+		  letra = getc(pfs);
+		  while ( !feof(pfs) ) // Mientras no sea final de fichero
+		     {
+		     putchar(letra);    // Muestra el caracter leido
+		     letra = getc(pfs);
+		     }
+		
+		   // Cerrar fichero
+		  fclose(pfs);
+		  getch();
+		  //getchar();
+        break;
        case 3:
             
             break;
