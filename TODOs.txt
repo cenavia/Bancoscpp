@@ -1,0 +1,30 @@
+BANCOS 
+TODO ESTO EN UNA SOLA CARPETA ARCHIVO COMPRIMIDO
+
+EL MENU PRINCIPAL
+1.ingresasr cuentas
+2.ver cuentas
+3.salir
+
+- USUARIOS
+EN UN ARCHIVO PLANO
+ dentro de usuario entra
+cedula nombre edad barrio 
+
+
+CUENTA.TXT
+EN UN ARCHIVO PLANO
+cedula 
+codigo 
+tipo 
+saldo 
+fecha oportuna
+
+BANCOS
+EN UN ARCHIVO PLANO
+codigo nombre calificacion ciudad 
+
+INFORMACION DE CUENTAS
+EN UN ARCHIVO PLANO
+
+usuario banco tipo de cuenta saldo fecha
