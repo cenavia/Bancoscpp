@@ -52,10 +52,15 @@ int main()
 				
 				printf("\nArchivo guardado correctamente !!!!");
 				
+				fprintf(directorio, "Cedula: ");
 				fputs(cedula, directorio);
+				fprintf(directorio, "Codigo: ");
 				fputs(codigo, directorio);
+				fprintf(directorio, "Tipo: ");
 				fputs(tipo, directorio);
+				fprintf(directorio, "Saldo: ");
 				fputs(saldo, directorio);
+				fprintf(directorio, "Fecha: ");
 				fputs(fecha_oportuna, directorio);
 				fprintf(directorio, "\n------------------------------------------------------------\n");
 				
