@@ -1,7 +1,8 @@
 
 ------------------------------------------------------------
-Nombre: Carlos Enrique
-Edad: 25
-Barrio: La cordialidad
+Cedula: 1087125728
+Nombre: Carlos Perez
+Edad: 30
+Barrio: Morrito
 
 ------------------------------------------------------------
