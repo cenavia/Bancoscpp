@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 	int opc;
-	char cedula[100], codigo[50], tipo[150], saldo[50];
+	char cedula[100], codigo[50], tipo[150], saldo[50], nombre[50], edad[50], barrio[50];
 	char fecha_oportuna[150];
 	int enter=13;
 	// Codigo para Opciones del Sistema.
@@ -34,6 +34,15 @@ int main()
 				
 				printf("\nIngrese Cedula: ");
 				fgets(cedula, 50, stdin);
+				
+				printf("\nIngrese Nombre: ");
+				fgets(nombre, 50, stdin);
+				
+				printf("\nIngrese Edad: ");
+				fgets(edad, 50, stdin);
+				
+				printf("\nIngrese Direccion: ");
+				fgets(barrio, 50, stdin);
 				
 				printf("\nIngese Codigo: ");
 				fgets(codigo, 150, stdin);
@@ -64,6 +73,25 @@ int main()
 				fputs(saldo, directorio);
 				fprintf(directorio, "Fecha: ");
 				fputs(fecha_oportuna, directorio);
+				fprintf(directorio, "\n------------------------------------------------------------\n");
+				
+				fclose(directorio);
+				}
+				if((directorio=fopen("Usuarios.txt","a")) != NULL)
+				{
+				
+				printf("\nArchivo guardado correctamente !!!!");
+				
+			
+				fprintf(directorio, "\n------------------------------------------------------------\n");
+				fprintf(directorio, "Cedula: ");
+				fputs(cedula, directorio);
+				fprintf(directorio, "Nombre: ");
+				fputs(nombre, directorio);
+				fprintf(directorio, "Edad: ");
+				fputs(edad, directorio);
+				fprintf(directorio, "Barrio: ");
+				fputs(barrio, directorio);
 				fprintf(directorio, "\n------------------------------------------------------------\n");
 				
 				fclose(directorio);
