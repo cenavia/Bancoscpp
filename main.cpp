@@ -10,15 +10,14 @@ int main()
 {
 	int opc;
 	char cedula[100], codigo[50], tipo[150], saldo[50], nombre[50], edad[50], barrio[50];
-	char fecha_oportuna[150];
+	char fecha_oportuna[150], codigo_banco [150], nombre_banco [50], calificacion[50], ciudad[50];
 	int enter=13;
 	// Codigo para Opciones del Sistema.
 	do{do{system("cls");
 	cout<<"\n\n\n Bancos - Menu principal\n\n\n";
 	cout<<"1.- Ingresar cuentas.\n";
 	cout<<"2.- Ver cuentas.\n";
-	cout<<"3.- Area de un Triangulo.\n";
-	cout<<"4.- Salir.\n Opcion : ";
+	cout<<"3.- Salir.\n Opcion : ";
 	cin>>opc;
 	}while(opc<1 || opc>4);
 	switch (opc)
@@ -55,14 +54,25 @@ int main()
 				
 				printf("\nIngrese Fecha: ");
 				fgets(fecha_oportuna, 100, stdin);
+
+				printf("\nIngrese Codigo Banco: ");
+				fgets(codigo_banco, 100, stdin);
+				
+				printf("\nIngrese Nombre Banco: ");
+				fgets(nombre_banco, 100, stdin);
+				
+				printf("\nIngrese calificacion: ");
+				fgets(calificacion, 100, stdin);
+				
+				printf("\nIngrese Ciudad: ");
+				fgets(ciudad, 100, stdin);
+				
 				
 				if((directorio=fopen("Cuentas.txt","a")) != NULL)
 				{
 				
-				printf("\nArchivo guardado correctamente !!!!");
-				
 			
-				fprintf(directorio, "\n------------------------------------------------------------\n");
+				fprintf(directorio, "\n \n");
 				fprintf(directorio, "Cedula: ");
 				fputs(cedula, directorio);
 				fprintf(directorio, "Codigo: ");
@@ -80,10 +90,9 @@ int main()
 				if((directorio=fopen("Usuarios.txt","a")) != NULL)
 				{
 				
-				printf("\nArchivo guardado correctamente !!!!");
 				
 			
-				fprintf(directorio, "\n------------------------------------------------------------\n");
+				fprintf(directorio, "\n \n");
 				fprintf(directorio, "Cedula: ");
 				fputs(cedula, directorio);
 				fprintf(directorio, "Nombre: ");
@@ -92,6 +101,43 @@ int main()
 				fputs(edad, directorio);
 				fprintf(directorio, "Barrio: ");
 				fputs(barrio, directorio);
+				fprintf(directorio, "\n------------------------------------------------------------\n");
+				
+				fclose(directorio);
+				}
+				if((directorio=fopen("Bancos.txt","a")) != NULL)
+				{
+				
+				
+				fprintf(directorio, "\n \n");
+				fprintf(directorio, "Codigo Banco: ");
+				fputs(codigo_banco, directorio);
+				fprintf(directorio, "Nombre Banco: ");
+				fputs(nombre_banco, directorio);
+				fprintf(directorio, "Calificacion: ");
+				fputs(calificacion, directorio);
+				fprintf(directorio, "Ciudad: ");
+				fputs(ciudad, directorio);
+				fprintf(directorio, "\n------------------------------------------------------------\n");
+				
+				fclose(directorio);
+				}
+				if((directorio=fopen("InfoCuenta.txt","a")) != NULL)
+				{
+				
+				printf("\nArchivo guardado correctamente !!!!");
+				
+				fprintf(directorio, "\n \n");
+				fprintf(directorio, "Nombre: ");
+				fputs(nombre, directorio);
+				fprintf(directorio, "Nombre Banco: ");
+				fputs(nombre_banco, directorio);
+				fprintf(directorio, "Tipo: ");
+				fputs(tipo, directorio);
+				fprintf(directorio, "Saldo: ");
+				fputs(saldo, directorio);
+				fprintf(directorio, "Fecha: ");
+				fputs(fecha_oportuna, directorio);
 				fprintf(directorio, "\n------------------------------------------------------------\n");
 				
 				fclose(directorio);
@@ -126,11 +172,9 @@ int main()
 		  getch();
 		  //getchar();
         break;
-       case 3:
-            
-            break;
+       
 		}
-	}while(opc<4);
+	}while(opc<3);
     
 
 }

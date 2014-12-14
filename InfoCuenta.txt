@@ -1,8 +1,9 @@
 
  
-Cedula: 1087203174
 Nombre: Mayra Monta¤o
-Edad: 19
-Barrio: U. Victoria
+Nombre Banco: Popular
+Tipo: Corriente
+Saldo: 12000000
+Fecha: 12-12-2010
 
 ------------------------------------------------------------
